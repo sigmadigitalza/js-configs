@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "shx cp ./configFiles/.babelrc . && shx cp ./configFiles/.editorconfig . && shx cp ./configFiles/.eslintignore . && shx cp ./configFiles/.flowconfig . && shx cp ./configFiles/.prettierrc.js . && shx cp ./configFiles/.stylelintrc .",
+    "prepare": "shx cp ./configFiles/.babelrc . && shx cp ./configFiles/.editorconfig . && shx cp ./configFiles/.eslintignore . && shx cp ./configFiles/.flowconfig . && shx cp ./configFiles/.prettierrc.js . && shx cp ./configFiles/.stylelintrc .",
     "semver:patch": "npm version patch",
     "semver:minor": "npm version minor",
     "semver:major": "npm version major",
@@ -31,9 +31,8 @@
     "url": "https://github.com/sigmadigitalza/js-configs/issues"
   },
   "homepage": "https://github.com/sigmadigitalza/js-configs#readme",
-  "dependancies": {
-    "@babel/polyfill": ">= 7.0.0",
-    "shx": ">= 0.3.2"
+  "dependencies": {
+    "@babel/polyfill": ">= 7.0.0"
   },
   "devDependencies": {
     "shx": ">= 0.3.2",
