@@ -1,0 +1,3 @@
+{
+  "presets": ["@sigmadigital/configs/preset/babel"]
+}
