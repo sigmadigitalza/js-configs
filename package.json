@@ -4,7 +4,8 @@
   "description": "common JS configs for eslint, prettier, babel and stylelint",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "vendor-copy"
   },
   "repository": {
     "type": "git",
@@ -23,11 +24,16 @@
     "url": "https://github.com/sigmadigitalza/js-configs/issues"
   },
   "homepage": "https://github.com/sigmadigitalza/js-configs#readme",
+  "dependancies": {
+    "@babel/polyfill": ">= 7.0.0",
+    "vendorCopy": ">1"
+  },
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
+    "@babel/cli": ">= 7.0.0",
+    "@babel/core": ">= 7.0.0",
     "eslint": ">= 5",
     "jest": ">= 24",
+    "flow-bin": ">= 0.91",
     "prettier": ">= 1.16.1",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/plugin-proposal-decorators": "^7.0.0",
@@ -55,18 +61,46 @@
     "eslint-plugin-react": ">= 7.12.4",
     "eslint-plugin-standard": ">= 4",
     "eslint-plugin-flowtype-errors": ">= 3.6.0",
-    "stylelint": "^9.4.0",
-    "stylelint-config-prettier": "^4.0.0",
-    "stylelint-config-recommended-scss": "^3.2.0",
-    "stylelint-config-standard": "^18.2.0",
-    "stylelint-prettier": "^1.0.3",
-    "stylelint-scss": "^3.4.0"
+    "stylelint": ">= 9.4.0",
+    "stylelint-config-prettier": ">= 4.0.0",
+    "stylelint-config-recommended-scss": ">= 3.2.0",
+    "stylelint-config-standard": ">= 18.2.0",
+    "stylelint-prettier": ">= 1.0.3",
+    "stylelint-scss": ">= 3.4.0"
   },
   "peerDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
+    "@babel/cli": ">= 7.0.0",
+    "@babel/core": ">= 7.0.0",
     "eslint": ">= 5",
     "jest": ">= 24",
-    "prettier": ">= 1.16.1"
-  }
+    "prettier": ">= 1.16.1",
+    "flow-bin": ">= 0.91",
+    "@babel/polyfill": ">= 7.0.0"
+  },
+  "devVendorCopy": [
+    {
+      "from": "./configFiles/.babelrc",
+      "to": ".babelrc"
+    },
+    {
+      "from": "./configFiles/.editorconfig",
+      "to": ".editorconfig"
+    },
+    {
+      "from": "./configFiles/.eslintignore",
+      "to": ".eslintignore"
+    },
+    {
+      "from": "./configFiles/.flowconfig",
+      "to": ".flowconfig"
+    },
+    {
+      "from": "./configFiles/.prettierrc.js",
+      "to": ".prettierrc.js"
+    },
+    {
+      "from": "./configFiles/.stylelint",
+      "to": ".stylelint"
+    }
+  ]
 }
