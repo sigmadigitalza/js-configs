@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "devVendorCopy",
+    "postinstall": "shx cp ./configFiles/.babelrc . && shx cp ./configFiles/.editorconfig . && shx cp ./configFiles/.eslintignore . && shx cp ./configFiles/.flowconfig . && shx cp ./configFiles/.prettierrc.js . && shx cp ./configFiles/.stylelint .",
     "semver:patch": "npm version patch",
     "semver:minor": "npm version minor",
     "semver:major": "npm version major",
@@ -29,10 +29,10 @@
   },
   "homepage": "https://github.com/sigmadigitalza/js-configs#readme",
   "dependancies": {
-    "@babel/polyfill": ">= 7.0.0",
-    "vendorCopy": ">1"
+    "@babel/polyfill": ">= 7.0.0"
   },
   "devDependencies": {
+    "shx": ">= 0.3.2",
     "@babel/cli": ">= 7.0.0",
     "@babel/core": ">= 7.0.0",
     "eslint": ">= 5",
@@ -80,31 +80,5 @@
     "prettier": ">= 1.16.1",
     "flow-bin": ">= 0.91",
     "@babel/polyfill": ">= 7.0.0"
-  },
-  "devVendorCopy": [
-    {
-      "from": "./configFiles/.babelrc",
-      "to": ".babelrc"
-    },
-    {
-      "from": "./configFiles/.editorconfig",
-      "to": ".editorconfig"
-    },
-    {
-      "from": "./configFiles/.eslintignore",
-      "to": ".eslintignore"
-    },
-    {
-      "from": "./configFiles/.flowconfig",
-      "to": ".flowconfig"
-    },
-    {
-      "from": "./configFiles/.prettierrc.js",
-      "to": ".prettierrc.js"
-    },
-    {
-      "from": "./configFiles/.stylelint",
-      "to": ".stylelint"
-    }
-  ]
+  }
 }
