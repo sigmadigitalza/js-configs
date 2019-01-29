@@ -1,6 +1,6 @@
 module.exports = {
-  'babel-preset': require('presets/babel'),
-  'eslint-preset': require('presets/eslint'),
-  'prettier-preset': require('presets/prettier'),
-  'stylelint-preset': require('presets/stylelint'),
+  'babel': require('presets/babel'),
+  'eslint': require('presets/eslint'),
+  'prettier': require('presets/prettier'),
+  'stylelint': require('presets/stylelint'),
 };
