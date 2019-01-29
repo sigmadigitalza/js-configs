@@ -32,10 +32,10 @@
   },
   "homepage": "https://github.com/sigmadigitalza/js-configs#readme",
   "dependencies": {
+    "shelljs": ">= 0.8.3",
     "@babel/polyfill": ">= 7.0.0"
   },
   "devDependencies": {
-    "shelljs": ">= 0.8.3",
     "shx": ">= 0.3.2",
     "@babel/cli": ">= 7.0.0",
     "@babel/core": ">= 7.0.0",
