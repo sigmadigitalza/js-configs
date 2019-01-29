@@ -1,0 +1,26 @@
+{
+  "name": "@sigmadigital/configs",
+  "version": "1.0.0",
+  "description": "common JS configs for eslint, prettier, babel and stylelint",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sigmadigitalza/js-configs.git"
+  },
+  "keywords": [
+    "eslint",
+    "babel",
+    "prettier",
+    "stylelint",
+    "sigmadigital"
+  ],
+  "author": "Paul van Zyl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sigmadigitalza/js-configs/issues"
+  },
+  "homepage": "https://github.com/sigmadigitalza/js-configs#readme"
+}

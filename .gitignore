@@ -1,0 +1,12 @@
+# system
+.DS_Store
+
+# project
+.idea
+.scratch
+node_modules
+coverage
+dist/**/*
+*.env
+/package-lock.json
+/yarn.lock
