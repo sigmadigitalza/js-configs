@@ -17,7 +17,7 @@
     "stylelint",
     "sigmadigital"
   ],
-  "author": "Paul van Zyl",
+  "author": "Paul van Zyl <paul+npm@sigmadigital.io>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sigmadigitalza/js-configs/issues"
