@@ -39,21 +39,44 @@ npm install --save-dev @babel/cli@">=7.0.0" @babel/core@">=7.0.0" eslint@">=5" j
 npm install --save @babel/polyfill@">=7.0.0"
 ```
 
+### Config files
+If config files don't exist, they will be added to the project root, alternatively, you can use the following presets:
+
+```js
+// .babelrc
+@sigmadigital/configs/presets/babel
+
+// .babelrc (next JS after babel/next)
+@sigmadigital/configs/presets/babel/next
+
+// .stylelintrc
+@sigmadigital/configs/presets/stylelint
+
+// .eslint.json
+@sigmadigital/eslint-config-kitchensink
+
+// .prettierrc.js 
+module.exports = require('@sigmadigital/configs/presets/prettier');
+
+```
+
+you can inspect the default project config files that should be used in the root in the **./configFiles** directory.
+
 
 ## Example Scripts
-it will be useful to add these to the scripts section of your `package.json` (example uses yarn, swap this npm if you prefer):
+it will be useful to add these to the scripts section of your `package.json`:
 
 ```json
 {
   "scripts": {
-        "lint": "yarn run lint:js && yarn run lint:scss",
+        "lint": "npm run lint:js && npm run lint:scss",
         "lint:js": "eslint \"assets/js/**\"",
         "lint:scss": "stylelint \"assets/scss/*.scss\"",
-        "codestyle": "yarn run codestyle:fix && yarn run codestyle:prettier",
-        "codestyle:fix": "yarn run codestyle:fix:js && yarn run codestyle:fix:scss",
+        "codestyle": "npm run codestyle:fix && npm run codestyle:prettier",
+        "codestyle:fix": "npm run codestyle:fix:js && npm run codestyle:fix:scss",
         "codestyle:fix:js": "eslint --fix \"assets/**/*.js\"",
         "codestyle:fix:scss": "stylelint \"assets/**/*.scss\" --fix",
-        "codestyle:prettier": "yarn run codestyle:prettier:js && yarn run codestyle:prettier:scss",
+        "codestyle:prettier": "npm run codestyle:prettier:js && npm run codestyle:prettier:scss",
         "codestyle:prettier:js": "prettier --write \"assets/**/*.js\"",
         "codestyle:prettier:scss": "prettier --write \"assets/**/*.scss\""
   }
