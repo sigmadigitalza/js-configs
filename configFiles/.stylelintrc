@@ -1,6 +1,6 @@
 {
   "extends": [
-    "@sigmadigital/configs/stylelint"
+    "@sigmadigital/configs/presets/stylelint"
   ],
   "ignoreFiles": [
     "./coverage/**/*",

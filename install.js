@@ -6,6 +6,7 @@ if (process.env.NODE_ENV !== 'production') {
   const sh = require('shelljs');
 
   sh.cp( path.join(__dirname, './configFiles', '.babelrc'), path.join(__dirname, '../../../'));
+  sh.cp( path.join(__dirname, './configFiles', '.eslintrc.json'), path.join(__dirname, '../../../'));
   sh.cp( path.join(__dirname, './configFiles', '.editorconfig'), path.join(__dirname, '../../../'));
   sh.cp( path.join(__dirname, './configFiles', '.eslintignore'), path.join(__dirname, '../../../'));
   sh.cp( path.join(__dirname, './configFiles', '.flowconfig'), path.join(__dirname, '../../../'));

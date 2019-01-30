@@ -1,7 +1,7 @@
 module.exports = () => ({
   presets: [
     [
-      require("@babel/preset-env"),
+      "@babel/preset-env",
       {
         targets: {
           browsers: [
@@ -14,24 +14,24 @@ module.exports = () => ({
         useBuiltIns: "usage"
       }
     ],
-    [ require( "@babel/preset-react") ],
-    [ require("@babel/preset-flow") ],
-    [ require("minify") ]
+    [ "@babel/preset-react" ],
+    [ "@babel/preset-flow" ],
+    [ "minify" ]
   ],
   plugins: [
-    require("@babel/plugin-syntax-dynamic-import"),
-    require("@babel/plugin-syntax-import-meta"),
-    require("@babel/plugin-proposal-class-properties"),
-    require("@babel/plugin-proposal-json-strings"),
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-syntax-import-meta",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-json-strings",
     [
-      require("@babel/plugin-proposal-decorators"),
+      "@babel/plugin-proposal-decorators",
       {
         "legacy": true
       }
     ],
-   require("@babel/plugin-proposal-function-sent"),
-   require("@babel/plugin-proposal-export-namespace-from"),
-   require("@babel/plugin-proposal-numeric-separator"),
-   require("@babel/plugin-proposal-throw-expressions"),
+   "@babel/plugin-proposal-function-sent",
+   "@babel/plugin-proposal-export-namespace-from",
+   "@babel/plugin-proposal-numeric-separator",
+   "@babel/plugin-proposal-throw-expressions",
   ]
 });

@@ -1,0 +1,3 @@
+{
+  "extends": [ "@sigmadigital/configs/presets/eslint" ]
+}
