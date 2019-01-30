@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "version": "auto-changelog -p && git add CHANGELOG.md",
     "postinstall": "node ./install.js",
     "semver:patch": "npm version patch",
     "semver:minor": "npm version minor",
@@ -64,7 +65,9 @@
     "stylelint-prettier": ">= 1.0.3",
     "stylelint-scss": ">= 3.4.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "auto-changelog": "^1.11.0"
+  },
   "peerDependencies": {
     "@babel/cli": ">= 7.0.0",
     "@babel/core": ">= 7.0.0",
@@ -73,5 +76,11 @@
     "prettier": ">= 1.16.1",
     "flow-bin": ">= 0.91",
     "@babel/polyfill": ">= 7.0.0"
+  },
+  "auto-changelog": {
+    "output": "CHANGELOG.md",
+    "template": "keepachangelog",
+    "unreleased": true,
+    "commitLimit": false
   }
 }
