@@ -19,6 +19,9 @@ module.exports = {
       "severity": "warning"
     }],
     "no-empty-source": null,
+    'property-no-vendor-prefix': true,
+    'value-no-vendor-prefix': true,
+    'selector-pseudo-element-colon-notation': 'double',
     "at-rule-no-unknown": [
       true,
       {
