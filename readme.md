@@ -23,6 +23,7 @@ While your project will require some root dependencies to be installed, this pac
    
    # dependencies
    @babel/polyfill@">= 7.0.0"
+   @babel/runtime@">= 7.3"
 ```
 
 ### Install
@@ -36,7 +37,7 @@ or alternatively, install this package with all its dependencies with the follow
 ```bash
 npm install --save-dev @babel/cli@">=7.0.0" @babel/core@">=7.0.0" eslint@">=5" jest@">=24" prettier@">=1.16.1" flow-bin@">=0.91" @sigmadigital/configs 
 
-npm install --save @babel/polyfill@">=7.0.0"
+npm install --save @babel/polyfill@">=7.0.0"  @babel/runtime@">= 7.3"
 ```
 
 ### Config files
@@ -69,16 +70,16 @@ it will be useful to add these to the scripts section of your `package.json`:
 ```json
 {
   "scripts": {
-        "lint": "npm run lint:js && npm run lint:scss",
-        "lint:js": "eslint \"assets/js/**\"",
-        "lint:scss": "stylelint \"assets/scss/*.scss\"",
-        "codestyle": "npm run codestyle:fix && npm run codestyle:prettier",
-        "codestyle:fix": "npm run codestyle:fix:js && npm run codestyle:fix:scss",
-        "codestyle:fix:js": "eslint --fix \"assets/**/*.js\"",
-        "codestyle:fix:scss": "stylelint \"assets/**/*.scss\" --fix",
-        "codestyle:prettier": "npm run codestyle:prettier:js && npm run codestyle:prettier:scss",
-        "codestyle:prettier:js": "prettier --write \"assets/**/*.js\"",
-        "codestyle:prettier:scss": "prettier --write \"assets/**/*.scss\""
+    "lint": "npm run lint:js && npm run lint:scss",
+    "lint:js": "eslint \"assets/js/**\"",
+    "lint:scss": "stylelint \"assets/scss/*.scss\"",
+    "codestyle": "npm run codestyle:fix && npm run codestyle:prettier",
+    "codestyle:fix": "npm run codestyle:fix:js && npm run codestyle:fix:scss",
+    "codestyle:fix:js": "eslint --fix \"assets/**/*.js\"",
+    "codestyle:fix:scss": "stylelint \"assets/**/*.scss\" --fix",
+    "codestyle:prettier": "npm run codestyle:prettier:js && npm run codestyle:prettier:scss",
+    "codestyle:prettier:js": "prettier --write \"assets/**/*.js\"",
+    "codestyle:prettier:scss": "prettier --write \"assets/**/*.scss\""
   }
 }
 ```
