@@ -16,7 +16,6 @@ module.exports = () => ({
     ],
     [ "@babel/preset-react" ],
     [ "@babel/preset-flow" ],
-    [ "minify" ]
   ],
   plugins: [
     "@babel/plugin-transform-runtime",

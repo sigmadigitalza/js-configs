@@ -2,7 +2,6 @@
 module.exports = () => ({
   presets: [
     [ "@babel/preset-flow" ],
-    [ "minify" ]
   ],
   plugins: [
     "@babel/plugin-proposal-export-default-from",
