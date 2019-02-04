@@ -21,10 +21,10 @@ const addListOfConfigFilesToRoot = filesArr => filesArr.map(f => addConfigFileTo
 
 // @TODO: these should not be tasks that autorun, this should be the work of a basic CLI
 if (process.env.NODE_ENV !== 'production') {
-  console.log('copying over config files, this will replace existing configs.');
+  console.log('copying over config files, this will not replace existing configs.');
 
   const configs = [
-    '.babelrc',
+    'babel.config.js',
     '.eslintrc.json',
     '.editorconfig',
     '.eslintignore',
