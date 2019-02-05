@@ -1,6 +1,6 @@
 {
   "name": "@sigmadigital/configs",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "common JS configs for eslint, prettier, babel and stylelint",
   "main": "index.js",
   "scripts": {
